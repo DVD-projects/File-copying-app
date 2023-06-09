@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="468.0" prefWidth="672.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep10.io.controller.MainSceneController">
+   <children>
+      <Label alignment="CENTER" layoutX="50.0" layoutY="52.0" prefHeight="16.0" prefWidth="426.0" text="Select a Source File / Folder" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <HBox layoutX="34.0" layoutY="92.0" maxWidth="1.7976931348623157E308" spacing="5.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0">
+         <children>
+            <TextField fx:id="txtSource" maxWidth="1.7976931348623157E308" prefHeight="24.0" prefWidth="495.0" HBox.hgrow="ALWAYS" />
+            <Button fx:id="btnSource" mnemonicParsing="false" onAction="#btnSourceOnAction" prefHeight="24.0" prefWidth="92.0" text="BROWSE" />
+         </children>
+      </HBox>
+      <HBox layoutX="33.0" layoutY="197.0" maxWidth="1.7976931348623157E308" spacing="5.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0">
+         <children>
+            <TextField fx:id="txtDestination" maxWidth="1.7976931348623157E308" prefHeight="24.0" prefWidth="495.0" HBox.hgrow="ALWAYS" />
+            <Button fx:id="btnDestination" mnemonicParsing="false" onAction="#btnDestinationOnAction" prefHeight="24.0" prefWidth="92.0" text="BROWSE" />
+         </children>
+      </HBox>
+      <Label alignment="CENTER" layoutX="50.0" layoutY="159.0" prefHeight="16.0" prefWidth="426.0" text="Select a Destination" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER" layoutX="33.0" layoutY="274.0" maxWidth="1.7976931348623157E308" spacing="120.0" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="50.0">
+         <children>
+            <Button fx:id="btnCopy" mnemonicParsing="false" onAction="#btnCopyOnAction" prefHeight="24.0" prefWidth="100.0" text="COPY" HBox.hgrow="ALWAYS" />
+            <Button fx:id="btnMove" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnMoveOnAction" prefHeight="24.0" prefWidth="100.0" text="MOVE" />
+            <Button fx:id="btnDelete" layoutX="107.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="24.0" prefWidth="100.0" text="DELETE" />
+         </children>
+         <padding>
+            <Insets left="20.0" right="20.0" />
+         </padding>
+      </HBox>
+      <ProgressBar fx:id="progressBar" layoutX="48.0" layoutY="365.0" prefHeight="20.0" prefWidth="580.0" progress="0.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" />
+      <Label fx:id="lblProgress" alignment="CENTER" layoutY="403.0" text="0%" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+   </children>
+</AnchorPane>
